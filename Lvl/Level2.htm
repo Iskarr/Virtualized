@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="LevelMaps/Lv2.css" />
+    <title>Room 2: HTML</title>
+  </head>
+  <body>
+    <h1>Level 2: HTML</h1>
+
+    <div id="container">
+      <a id="I2">
+        Instructions: In this first exercise, write a simple line of code to
+        make a box appear.
+      </a>
+    </div>
+    <div id="secret" style="display: none;">
+      <p>You have completed this part of the course!</p>
+      <p>The secret code for the next course is: CSS IS AWESOME</p>
+    </div>
+    <form
+      name="myForm"
+      onsubmit="validation(); return false"
+      method="POST"
+      id="case"
+      autocomplete="off"
+    >
+      <input type="text" id="CmdLine" name="userid" required autofocus />
+      <input type="submit" style="display: none;" />
+    </form>
+    <script src="LvlScript/Level2.js"></script>
+  </body>
+</html>

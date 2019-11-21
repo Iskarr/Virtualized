@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="LevelMaps/Lv3.css" />
+    <title>Room 3: CSS</title>
+  </head>
+  <body>
+    <h1>Level 3: CSS</h1>
+
+    <div id="container">
+      <a id="I2">
+        Instructions: In this exercise you will learn to use the developer
+        console to find the code inside each box. Start by right clicking inside
+        one of the colored boxes and looking for the CSS color. Change it to
+        display the text behind it. Once you have the code type it into
+        terminal.
+      </a>
+      <br />
+      <div class="colorBox" id="justBox1">
+        <p id="TextCode1">Java</p>
+      </div>
+      <div class="colorBox" id="justBox2">
+        <p id="TextCode2">different</p>
+      </div>
+      <br />
+      <div class="colorBox" id="justBox3">
+        <p id="TextCode3">from</p>
+      </div>
+      <div class="colorBox" id="justBox4">
+        <p id="TextCode4">Javascript</p>
+      </div>
+    </div>
+    <div id="secret" style="display: none;">
+      <p>You have completed this part of the course!</p>
+      <p>The secret code for the next course is: Javascript</p>
+    </div>
+    <br />
+    <form
+      name="myForm"
+      onsubmit="validation(); return false"
+      method="POST"
+      id="case"
+      autocomplete="off"
+    >
+      <input type="text" id="CmdLine" name="userid" required autofocus />
+      <input type="submit" style="display: none;" />
+    </form>
+    <script src="LvlScript/Level3.js"></script>
+  </body>
+</html>

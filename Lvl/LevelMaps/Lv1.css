@@ -1,0 +1,83 @@
+span {
+  min-width: 5px;
+  display: inline-block;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.95em;
+  letter-spacing: 1.5px;
+  color: green;
+}
+
+.text {
+  overflow: hidden;
+  height: auto;
+  color: green;
+}
+#case {
+  background-color: #111;
+  color: green;
+}
+#Proceed {
+  display: none;
+}
+.ADCode {
+  background-color: #111;
+  color: green;
+  font-size: 20px;
+}
+
+body {
+  /* background: #111; */
+  background: #111;
+  position: relative;
+  color: lime;
+  font-family: "VT323", monospace;
+  font-size: 30px;
+}
+h1 {
+  text-align: center;
+}
+input {
+  font-family: "VT323", monospace;
+  font-size: 30px;
+}
+.House {
+  width: 100px;
+  height: 100px;
+  border: 1px solid blue;
+}
+#Hell {
+  width: 100px;
+  height: 100px;
+  border: 3px solid red;
+}
+#CmdLine {
+  display: block;
+  margin: 0 auto;
+  background: #111;
+  font-size: 35px;
+  color: green;
+  width: 600px;
+  height: 30px;
+}
+.errorMode {
+  border: 2px solid red;
+}
+#error {
+  color: red;
+}
+.error {
+  position: relative;
+  animation: shake 0.1s linear;
+  animation-iteration-count: 3;
+  border: 1px solid red;
+  outline: none;
+}
+
+@keyframes shake {
+  0% {
+    left: -5px;
+  }
+  100% {
+    right: -5px;
+  }
+}

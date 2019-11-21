@@ -1,0 +1,318 @@
+body {
+  /* background: #111; */
+  background: #111;
+  position: relative;
+  color: green;
+}
+h1 {
+  text-align: center;
+}
+#secret {
+  display: block;
+  margin: 0 auto;
+}
+#I2 {
+  font-size: 20px;
+}
+#container {
+  margin: 0 auto;
+  display: block;
+  border: 2px solid green;
+  width: 600px;
+  height: 450px;
+  margin-top: 0%;
+}
+input {
+  font-family: "VT323", monospace;
+  font-size: 30px;
+}
+#CmdLine {
+  display: block;
+  margin: 0 auto;
+  background: #111;
+  font-size: 20px;
+  color: green;
+  width: 500px;
+  height: 30px;
+}
+#error {
+  color: red;
+}
+.errorMode {
+  border: 2px solid red;
+}
+.error {
+  position: relative;
+  animation: shake 0.1s linear;
+  animation-iteration-count: 3;
+  border: 1px solid red;
+  outline: none;
+}
+
+@keyframes shake {
+  0% {
+    left: -5px;
+  }
+  100% {
+    right: -5px;
+  }
+}
+
+/* Puzzle stuff */
+#dataOut {
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  margin-bottom: 500px;
+}
+
+/* Code inside box */
+
+#secret {
+  display: block;
+  margin: 0 auto;
+  margin-top: 350px;
+}
+
+/* Rain effect */
+
+.rain {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.rain.back-row {
+  display: none;
+  z-index: 1;
+  bottom: 60px;
+  opacity: 0.5;
+}
+
+body.back-row-toggle .rain.back-row {
+  display: block;
+}
+
+.drop {
+  position: absolute;
+  bottom: 100%;
+  width: 15px;
+  height: 120px;
+  pointer-events: none;
+  animation: drop 0.5s linear infinite;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(0vh);
+  }
+  75% {
+    transform: translateY(90vh);
+  }
+  100% {
+    transform: translateY(90vh);
+  }
+}
+
+.stem {
+  width: 1px;
+  height: 60%;
+  margin-left: 7px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.25)
+  );
+  animation: stem 0.5s linear infinite;
+}
+
+@keyframes stem {
+  0% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.splat {
+  width: 15px;
+  height: 10px;
+  border-top: 2px dotted rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  opacity: 1;
+  transform: scale(0);
+  animation: splat 0.5s linear infinite;
+  display: none;
+}
+
+body.splat-toggle .splat {
+  display: block;
+}
+
+@keyframes splat {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  90% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+.toggles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.toggle {
+  position: absolute;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  line-height: 51px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.toggle:active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.toggle.active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.splat-toggle {
+  top: 20px;
+}
+
+.back-row-toggle {
+  top: 90px;
+  line-height: 12px;
+  padding-top: 14px;
+}
+
+.single-toggle {
+  top: 160px;
+}
+
+body.single-toggle .drop {
+  display: none;
+}
+
+body.single-toggle .drop:nth-child(10) {
+  display: block;
+}
+
+/* SVG FIRE */
+.mo-fire {
+  height: auto;
+  position: fixed;
+  left: 20%;
+  bottom: -50px;
+  z-index: 4;
+}
+
+#svg-view {
+  width: 252px;
+  height: 125px;
+  left: 0px;
+}
+
+.mo-fire svg {
+  height: auto;
+  position: relative;
+  right: 190px;
+}
+.flame {
+  animation-name: flameDisappear;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  opacity: 0.5;
+  transform-origin: 45% 45% 0;
+}
+.flame.one {
+  animation-delay: 1s;
+  animation-duration: 3s;
+}
+.flame.two {
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+.flame-main {
+  animation-name: flameMovement;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.flame-main.one {
+  animation-duration: 2.2s;
+  animation-delay: 1s;
+}
+.flame-main.two {
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+.flame-main.three {
+  animation-duration: 2.1s;
+  animation-delay: 3s;
+}
+.flame-main.four {
+  animation-duration: 3.2s;
+  animation-delay: 4s;
+}
+.flame-main.five {
+  animation-duration: 2.5s;
+  animation-delay: 5s;
+}
+@keyframes flameMovement {
+  50% {
+    transform: scale(0.98, 1) translate(0, 2px) rotate(-1deg);
+  }
+}
+@keyframes flameDisappear {
+  0% {
+    transform: translate(0) rotate(180deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-10px, -40px) rotate(180deg);
+    opacity: 0;
+  }
+}
