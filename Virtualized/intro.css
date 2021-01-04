@@ -1,0 +1,30 @@
+span {
+  min-width: 5px;
+  display: inline-block;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.95em;
+  letter-spacing: 1.5px;
+  color: green;
+}
+body {
+  /* background: #111; */
+  background: #111;
+  position: relative;
+}
+.text {
+  overflow: hidden;
+  height: auto;
+  color: green;
+}
+#case {
+  background-color: #111;
+  color: green;
+}
+#Proceed {
+  display: none;
+}
+.ADCode {
+  background-color: #111;
+  color: green;
+  font-size: 20px;
+}
